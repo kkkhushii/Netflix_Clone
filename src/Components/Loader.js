@@ -1,12 +1,10 @@
 import React from 'react';
-import {Rings} from 'react-loader-spinner'
+import { Spin } from 'antd';
 
-function Loader() {
-  return (
-	<div>
-	 <Rings className="loading" height="80" width="80" color="#4fa94d"/>
-	</div>
-  )
-}
+const Loader = () => (
+  <div className="loader">
+    <Spin />
+  </div>
+);
 
-export default Loader
+export default Loader;

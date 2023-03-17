@@ -1,14 +1,20 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import App from './App';
-import storereducer from './store';
-import { Provider } from 'react-redux';
+import './input.css';
+import 'antd/dist/reset.css';
+import { BrowserRouter } from "react-router-dom";
+import store from './app/store.js';
+import { Provider } from 'react-redux'
+
 
 ReactDOM.render(
-    <Provider store={storereducer}>
-        <App />
-    </Provider>,
-
-    document.getElementById("root")
-
+   <BrowserRouter>
+   <Provider store={store}>
+   <App />
+   </Provider>
+ </BrowserRouter>,
+  document.getElementById('root')
 );
+
+
